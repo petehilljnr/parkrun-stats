@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/parkrun-stats/static/css/main.676b0cf3.chunk.css",
+    "main.js": "/parkrun-stats/static/js/main.d5aab1c7.chunk.js",
+    "main.js.map": "/parkrun-stats/static/js/main.d5aab1c7.chunk.js.map",
+    "runtime-main.js": "/parkrun-stats/static/js/runtime-main.2c276ef1.js",
+    "runtime-main.js.map": "/parkrun-stats/static/js/runtime-main.2c276ef1.js.map",
+    "static/js/2.be794cce.chunk.js": "/parkrun-stats/static/js/2.be794cce.chunk.js",
+    "static/js/2.be794cce.chunk.js.map": "/parkrun-stats/static/js/2.be794cce.chunk.js.map",
+    "static/js/3.c4509ec7.chunk.js": "/parkrun-stats/static/js/3.c4509ec7.chunk.js",
+    "static/js/3.c4509ec7.chunk.js.map": "/parkrun-stats/static/js/3.c4509ec7.chunk.js.map",
+    "index.html": "/parkrun-stats/index.html",
+    "static/css/main.676b0cf3.chunk.css.map": "/parkrun-stats/static/css/main.676b0cf3.chunk.css.map",
+    "static/js/2.be794cce.chunk.js.LICENSE.txt": "/parkrun-stats/static/js/2.be794cce.chunk.js.LICENSE.txt",
+    "static/media/parkrun.23c1fc26.png": "/parkrun-stats/static/media/parkrun.23c1fc26.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2c276ef1.js",
+    "static/js/2.be794cce.chunk.js",
+    "static/css/main.676b0cf3.chunk.css",
+    "static/js/main.d5aab1c7.chunk.js"
+  ]
+}
