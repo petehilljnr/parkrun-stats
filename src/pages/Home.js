@@ -64,7 +64,7 @@ const Home = () => {
 
   return (
     <Container>
-      <Row xs={1} md={1} lg={2} className="g-2" style={{ paddingTop: "8px" }}>
+      <Row xs={1} md={1} lg={2} className="g-4" style={{ paddingTop: "8px" }}>
         {data &&
           data.length > 0 &&
           data.map((item, index) => (
