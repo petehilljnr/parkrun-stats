@@ -1,15 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row, Col, NavItem, Card, CardGroup } from "react-bootstrap";
+import { Container, Row, Col,  Card, CardGroup } from "react-bootstrap";
 
 const RESULTS_URL =
   "https://raw.githubusercontent.com/petehilljnr/parkrun-stats/master/data/results.json";
-
-const chunk = (arr, chunkSize = 1, cache = []) => {
-  const tmp = [...arr];
-  if (chunkSize <= 0) return cache;
-  while (tmp.length) cache.push(tmp.splice(0, chunkSize));
-  return cache;
-};
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -25,33 +18,37 @@ const Home = () => {
   }, []);
 
   const StatCard = (props) => {
-      const card = (<Card className="mx-1 my-2">
+      const card = (
+          <Col style={{textAlign:"center"}}>
+
+      <Card className="mb-2"text={"white"} style={{backgroundColor:"#28203A"}}>
       <Card.Body>
-        <Card.Title>{props.stat}</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">
+        <Card.Title style={{fontSize:"3rem", marginBottom:"0px", textShadow:"0 0 15px yellow"}}>{props.stat}</Card.Title>
+        <Card.Subtitle className="mb-2" style={{fontStyle:"italic"}}>
           {props.units}
         </Card.Subtitle>
-        <Card.Text>
-          {props.description1}<br/>
-          {props.description2}
+        <Card.Text>          
+          <div style={{fontSize: "1.2rem"}}>{props.description1}</div>
+          <div>{props.description2}</div>
         </Card.Text>
       </Card.Body>
     </Card>
-
+    </Col>
       )
       return card;
   }
 
 
   return (
-    <Container fluid>
-        <CardGroup>
+    <Container>
+
+        <Row xs={1} md={1} lg={2} className="g-4" style={{paddingTop:"8px"}}>
       {data &&
         data.length > 0 &&
         data.map((item) => (
           <StatCard stat={item.stat} units={item.units} description1={item.description1} description2={item.description2} />
         ))}
-        </CardGroup>
+        </Row>
     </Container>
   );
 };

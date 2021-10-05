@@ -33,7 +33,7 @@ const Header = () => {
                     <img src={clientLogo} alt="Parkrun" height={65} />
                     </Logo>
                 <TitleBar>
-                    Dunedin Parkrun - Interesting Stats
+                    Dunedin Parkrun - Bunch of Stats
                 </TitleBar>
             </Nav>
         </>
