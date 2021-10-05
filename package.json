@@ -1,5 +1,5 @@
 {
-  "homepage" : "http://petehilljnr.github.io/parkrun-stats",
+  "homepage": "http://petehilljnr.github.io/parkrun-stats",
   "name": "parkrun-stats",
   "version": "0.1.0",
   "private": true,
@@ -8,6 +8,9 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "^5.1.1",
+    "crossfilter2": "^1.5.4",
+    "d3": "^7.1.1",
+    "dc": "^4.2.7",
     "deck.gl": "^8.5.10",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-rc.0",

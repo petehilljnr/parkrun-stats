@@ -33,7 +33,10 @@ const Header = () => {
                     <img src={clientLogo} alt="Parkrun" height={65} />
                     </Logo>
                 <TitleBar>
-                    Dunedin Parkrun - Bunch of Stats
+                    <div>
+                        <div className="card-title">A Bunch of Stats!</div>
+                        <div className="card-subtitle" style={{paddingTop: "0px", fontSize:"0.8rem"}}> Unofficial Dunedin Parkrun Data</div>
+                    </div>
                 </TitleBar>
             </Nav>
         </>
