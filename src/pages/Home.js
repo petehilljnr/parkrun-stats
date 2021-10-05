@@ -4,13 +4,19 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 const RESULTS_URL =
   "https://raw.githubusercontent.com/petehilljnr/parkrun-stats/master/data/results.json";
 
+
+
 const Home = () => {
+
   const [data, setData] = useState([]);
 
   const getData = async () => {
     const response = await fetch(RESULTS_URL);
     const jsonData = await response.json();
-    setData(jsonData);
+    
+    const shuffled = jsonData.sort(() => Math.random() - 0.5);
+
+    setData(shuffled);
   };
 
   useEffect(() => {
@@ -47,7 +53,7 @@ const Home = () => {
             </Card.Subtitle>
             <Card.Text>
               <span style={{ fontSize: "1.2rem" }}>{props.description1}</span><br/>
-              <span>{props.description2}</span>
+              <span style={{ color: "orange" }}>{props.description2}</span>
             </Card.Text>
           </Card.Body>
         </Card>
@@ -58,7 +64,7 @@ const Home = () => {
 
   return (
     <Container>
-      <Row xs={1} md={1} lg={2} className="g-4" style={{ paddingTop: "8px" }}>
+      <Row xs={1} md={1} lg={2} className="g-2" style={{ paddingTop: "8px" }}>
         {data &&
           data.length > 0 &&
           data.map((item, index) => (
