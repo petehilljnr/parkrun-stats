@@ -4,9 +4,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 const RESULTS_URL =
   "https://raw.githubusercontent.com/petehilljnr/parkrun-stats/master/data/results.json";
 
-
-
-const Home = () => {
+const Cards = () => {
 
   const [data, setData] = useState([]);
 
@@ -15,7 +13,6 @@ const Home = () => {
     const jsonData = await response.json();
     
     const shuffled = jsonData.sort(() => Math.random() - 0.5);
-
     setData(shuffled);
   };
 
@@ -23,6 +20,7 @@ const Home = () => {
     getData();
   }, []);
 
+  console.log(data)
   if (!data.length > 0)
     return (
       <Container>
@@ -64,7 +62,7 @@ const Home = () => {
 
   return (
     <Container>
-      <Row xs={1} md={1} lg={2} className="g-4" style={{ paddingTop: "8px" }}>
+      <Row xs={1} md={1} xl={2} className="g-4" style={{ paddingTop: "8px" }}>
         {data &&
           data.length > 0 &&
           data.map((item, index) => (
@@ -81,4 +79,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Cards;

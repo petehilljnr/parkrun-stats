@@ -1,16 +1,21 @@
 import './App.css';
-import Home from './pages/Home';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Cards from './pages/Cards';
+import Charts from './pages/Charts';
+import About from './pages/About';
+import { Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
 
 function App() {
   return (
-    <Router>
+    <>
       <Header />
       <Switch>
-        <Route path='' exact component={Home} />        
+        <Route path='/home' exact component={Cards} />
+        <Route path='/about' exact component={About} />  
+        <Route path='/charts' exact component={Charts} /> 
+        <Route path='/' exact component={Cards} />
       </Switch>
-    </Router>
+    </>
   );
 }
 
