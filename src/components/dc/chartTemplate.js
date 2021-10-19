@@ -21,12 +21,14 @@ export const ChartTemplate = props => {
   const ndx = context.ndx;
   const div = React.useRef(null);
   
+  const cf = props.chartFunction
+
   React.useEffect(() => {
-    const newChart = props.chartFunction(div.current, ndx); // chartfunction takes the ref and does something with it
+    const newChart = cf(div.current, ndx); // chartfunction takes the ref and does something with it
 
     newChart.render();
     updateChart(newChart);
-  },[]); 
+  },[ndx, cf]); 
 
   return (
     <div

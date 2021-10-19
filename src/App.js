@@ -9,11 +9,11 @@ function App() {
   return (
     <>
       <Header />
-      <Switch>
-        <Route path='/home' exact component={Cards} />
-        <Route path='/about' exact component={About} />  
-        <Route path='/charts' exact component={Charts} /> 
-        <Route path='/' exact component={Cards} />
+      <Switch>        
+        <Route path='/about' exact><About/></Route>
+        <Route path='/charts' exact><Charts/></Route>
+        <Route path='/home' exact><Cards/></Route>
+        <Route><Cards/></Route>
       </Switch>
     </>
   );

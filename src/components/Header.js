@@ -32,7 +32,7 @@ const Header = () => {
 
           <Navbar.Collapse id="navbar-nav" style={{justifyContent: "flex-end"}}>
             <Nav>
-              <Link className="nav-link" to="/">Home</Link>
+              <Link className="nav-link" to="/home">Home</Link>
               <Link className="nav-link" to="/charts">Results Charts</Link>
               <Link className="nav-link" to="/about">About</Link>
             </Nav>

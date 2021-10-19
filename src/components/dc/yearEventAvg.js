@@ -5,7 +5,6 @@ import { ChartTemplate } from "./chartTemplate";
 
 const f = (divRef, ndx) => {
   const c = dc.rowChart(divRef);
-  const all = ndx.groupAll();
   const dimension = ndx.dimension(function (d) {
     return d.event_year;
   });
